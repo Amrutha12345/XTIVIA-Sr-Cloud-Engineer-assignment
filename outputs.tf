@@ -12,3 +12,8 @@ output "private_subnet_ids" {
   description = "The IDs of the private subnets"
   value       = module.private_subnets.subnet_ids
 }
+
+output "security_group_id" {
+  description = "The ID of the security group"
+  value       = module.security_group.security_group_id
+}
