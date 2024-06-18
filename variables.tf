@@ -34,3 +34,10 @@ variable "availability_zones" {
   type        = list(string)
   default     = ["us-west-2a", "us-west-2b"]
 }
+
+
+variable "allowed_cidr" {
+  description = "The CIDR block allowed to access the security group"
+  type        = string
+  default     = "0.0.0.0/0"
+}

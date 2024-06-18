@@ -27,3 +27,10 @@ module "private_subnets" {
   subnet_type        = "private"
   prefix             = var.prefix
 }
+
+module "security_group" {
+  source     = "./aws-modules/security-group"
+  vpc_id     = module.vpc.vpc_id
+  allowed_cidr = var.allowed_cidr
+  prefix     = var.prefix
+}
